@@ -1,0 +1,48 @@
+{
+  "name": "fylo_dark-code_mentor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "parcel src/index.html",
+    "save-dev": "npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/plugin-transform-runtime sass postcss-modules autoprefixer cssnano",
+    "save": "npm install --save @babel/runtime core-js include-media rfs",
+    "build": "parcel build ./src/index.html --out-dir public",
+    "deploy": "firebase deploy"
+  },
+  "keywords": [
+    "javascript",
+    "firebase"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {
+        "overrideBrowserslist": [
+          ">1%",
+          "last 4 versions",
+          "Firefox ESR",
+          "ie > 9"
+        ]
+      },
+      "rfs": {}
+    }
+  },
+  "author": "Victor Alvarez <vicventum.dev@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "core-js": "^3.6.5",
+    "include-media": "^1.4.9",
+    "rfs": "^9.0.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "autoprefixer": "^9.8.6",
+    "cssnano": "^4.1.10",
+    "postcss-modules": "^3.2.2",
+    "sass": "^1.26.10"
+  }
+}

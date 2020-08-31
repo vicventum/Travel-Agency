@@ -1,0 +1,12 @@
+.header {
+  --min-height: 500px;
+
+  background-image: url(../../img/man.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: var(--min-height);
+
+  @include media('>=tablet') {
+    --min-height: 100vh;
+  }
+}

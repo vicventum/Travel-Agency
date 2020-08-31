@@ -1,0 +1,16 @@
+.footer {
+
+  .connect i {
+    margin-right: 10px;
+
+    
+  }
+  .connect i,
+  .connect a {
+    transition: color .1s ease-in-out;
+
+    &:hover {
+      color: rgb(197, 196, 255)!important;
+    }
+  }
+}

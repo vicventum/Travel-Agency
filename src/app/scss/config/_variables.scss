@@ -1,0 +1,49 @@
+$title-size: var(--title-size);
+$menu-top-size: var(--menu-top-size);
+$menu-bottom-size: var(--menu-bottom-size);
+$shows-size: var(--shows-size);
+$font-size: var(--font-size);
+$min-size: var(--min-size);
+
+$show-size: var(--show-size);
+
+$fw-light: var(--fw-light);
+$fw-normal: var(--fw-normal);
+$fw-bold: var(--fw-bold);
+$line-height: var(--line-height);
+
+
+$second-dark: var(--second-dark);
+$max-width: var(--max-width);
+$header-height: var(--header-height);
+$logo-width: var(--logo-width);
+$logo-height: var(--logo-height);
+$logo-spacing: var(--logo-spacing);
+
+$h1: var(--h1);
+$h2: var(--h2);
+$h3: var(--h3);
+
+$sp-1: 1rem;
+$sp-2: 2rem;
+$sp-3: 3rem;
+$sp-4: 4rem;
+$sp-5: 5rem;
+
+$spaceamounts: (1,2,3,4,5);
+
+// Breakpoints
+$breakpoints: (
+  'phone': 420px,
+  'tablet': 768px,
+  'laptop': 1024px,
+  'desktop': 1400px
+) !default;
+
+// z-index
+$z-index: (
+    tooltip: 100,
+    modal: 500,
+    overlay: 750,
+    offcanvas: 1000
+);
