@@ -361,6 +361,15 @@
   font-size: 1.15rem;
 }
 
+.section-follow i {
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.section-follow i:hover {
+  color: aqua;
+}
+
 .search__input.important {
   padding: 6px;
   font-size: 18px;

@@ -1,0 +1,7 @@
+.section-follow i {
+  transition: color .3s ease-in-out;
+
+  &:hover {
+    color: aqua;
+  }
+}
