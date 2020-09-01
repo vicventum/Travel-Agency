@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing The Ninja</title>
+  <title>Traveville</title>
 
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,285 +17,38 @@
 <body>
 
   <!-- NAVBAR -->
-  <header class="
-    header">
-
-    <nav class="nav-wrapper transparent 
-      navbar">
+  <div class="navbar-fixed">
+    <nav class="deep-purple">
       <div class="container">
-        <a href="#" class="brand-logo">Photo Ninja</a>
-        <a class="sidenav-trigger hide-on-med-and-up" href="#" data-target="mobile-menu"><i class="material-icons">menu</i></a>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Travelville</a>
+          <!-- Hamburguer Icon -->
+          <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+            <i class="material-icons">menu</i>
+          </a>
 
-        <!-- Menu -->
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#photos">Photos</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-
-          <li>
-            <a class="tooltipped btn-floating btn-small indigo darken-4 
-              navbar__media" data-tooltip="Instagram" href="#">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </li>
-
-          <li>
-            <a class="tooltipped btn-floating btn-small indigo darken-4 
-              navbar__media" data-tooltip="Facebook" href="#">
-              <i class="fab fa-facebook"></i>
-            </a>
-          </li>
-
-          <li>
-            <a class="tooltipped btn-floating btn-small indigo darken-4 
-              navbar__media" data-tooltip="Twitter" href="#">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-        </ul>
-
-        <!-- Mobile Menu -->
-        <ul class="sidenav grey lighten-2 " id="mobile-menu">
-          <li><a href="#photos">Photos</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-
-  <!-- PHOTO'S -->
-  <section id="photos" class="container section scrollspy">
-    <!-- Section 1 -->
-    <div class="row">
-      <div class="col s12 l4">
-        <img class="responsive-img materialboxed" src="/portrait.265e033e.jpg" alt="">
-      </div>
-
-      <div class="col s12 l6 offset-l1">
-        <h2 class="indigo-text text-darken-4">Portraits</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex amet voluptates consequuntur necessitatibus! Odit
-          ullam quam reprehenderit praesentium omnis sunt.
-        </p>
-      </div>
-    </div>
-
-    <!-- Section 2 -->
-    <div class="row ">
-      <div class="col s12 l4 push-l7 offset-l1">
-        <img class="responsive-img materialboxed" src="/city.2caa29e9.jpg" alt="">
-      </div>
-
-      <div class="col s12 l6 pull-l4 right-align ">
-        <h2 class="indigo-text text-darken-5  ">Cityscapes</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex amet voluptates consequuntur necessitatibus! Odit
-          ullam quam reprehenderit praesentium omnis sunt.
-        </p>
-      </div>
-    </div>
-
-    <!-- Section 3 -->
-    <div class="row">
-      <div class="col s12 l4 ">
-        <img class="responsive-img materialboxed" src="/nature.31d1cd2a.jpg" alt="">
-      </div>
-
-      <div class="col s12 l6 offset-l1">
-        <h2 class="indigo-text text-darken-4">Nature</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex amet voluptates consequuntur necessitatibus! Odit
-          ullam quam reprehenderit praesentium omnis sunt.
-        </p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PARALLAX -->
-  <section class="parallax-container">
-    <div class="parallax">
-      <img class="responsive-img" src="/street.407f9b92.jpg" alt="">
-    </div>
-  </section>
-
-
-  <!-- SERVICES / TABS -->
-  <section id="services" class="container section scrollspy">
-    <div class="row">
-      <div class="col s12 l4">
-        <h2 class="indigo-text text-darken-4">What I do...</h2>
-
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, veniam illum quae, sequi ipsum id quam
-          distinctio doloribus, sed placeat ipsam adipisci officiis. Inventore, facilis eligendi optio delectus rem
-          error?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dicta!
-        </p>
-      </div>
-
-
-      <div class="col s12 l6 offset-l2">
-        <ul class="tabs">
-          <li class="tab col s6">
-            <a href="#photography" class="indigo-text text-darken-4">Photography</a>
-          </li>
-          <li class="tab col s6">
-            <a href="#editing" class="indigo-text text-darken-4">Editing</a>
-          </li>
-        </ul>
-
-
-        <div id="photography" class="col s12">
-          <p class="flow-text indigo-text text-darken-4"> PHOTOGRAPHY</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, enim nesciunt reiciendis labore consectetur
-            earum in laudantium quia nemo doloribus voluptatem dolores amet provident facilis consequuntur odio laborum,
-            mollitia expedita?</p>
-        </div>
-        <div id="editing" class="col s12">
-          <p class="flow-text indigo-text text-darken-4"> EDITING</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, enim nesciunt reiciendis labore consectetur
-            earum in laudantium.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, molestias!
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- PARALLAX -->
-  <section class="parallax-container">
-    <div class="parallax">
-      <img class="responsive-img" src="/stars.316fb27b.jpg" alt="">
-    </div>
-  </section>
-
-
-  <!-- CONTACT FORM -->
-  <section id="contact" class="section container scrollspy">
-    <div class="row">
-      <div class="col s12 l5">
-        <h2 class="indigo-text text-darken-4">Get In Touch</h2>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis laboriosam qui molestias quidem sequi ipsum.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium quibusdam, nemo doloremque, eos
-          consectetur minus et cumque officiis porro fugit libero laboriosam. Repellendus, cumque temporibus? Cumque
-          quia vel nam fugiat!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, enim
-        </p>
-      </div>
-
-      <div class="col s12 l5 offset-l2">
-        <form action="">
-          <div class="input-field">
-            <i class="material-icons prefix indigo-text text-darken-2">email</i>
-            <label for="email">Your Email</label>
-            <input id="email" type="email">
-          </div>
-
-          <div class="input-field">
-            <i class="material-icons prefix indigo-text text-darken-2">message</i>
-            <label for="message">Your Message</label>
-            <textarea id="message" class="materialize-textarea"></textarea>
-          </div>
-
-          <div class="input-field">
-            <label for="date">Choose a date you need me for...</label>
-            <input id="date" class="datepicker" type="text">
-          </div>
-
-          <div class="input-field">
-            <p>Services required...</p>
-
-            <p>
-              <label>
-                <input type="checkbox">
-                <span>Photography</span>
-              </label>
-            </p>
-
-            <p>
-              <label>
-                <input type="checkbox">
-                <span>Editing</span>
-              </label>
-            </p>
-          </div>
-
-          <div class="input-field right">
-            <button class="btn waves-effect waves-light ">Submit</button>
-          </div>
-        </form>
-      </div>
-
-    </div>
-  </section>
-
-
-
-  <!-- FOOTER -->
-  <footer class="page-footer grey darken-3
-    footer">
-    <div class="container">
-      <div class="row">
-        <div class="col s12 l6">
-          <h5>About Me</h5>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, fugiat nihil necessitatibus modi quo quae.
-            In at ut fugit similique fugiat corporis cum nesciunt impedit, consequatur aut.
-          </p>
-        </div>
-
-        <div class="col s12 l4 offset-l2
-          connect">
-          <h5>Connect</h5>
-          <ul>
-            <li>
-              <a href="#" class="grey-text text-lighten-3">
-                <i class="fab fa-facebook prefix"></i>
-                <span>Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="grey-text text-lighten-3">
-                <i class="fab fa-twitter prefix"></i>
-                <span>Twitter</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="grey-text text-lighten-3">
-                <i class="fab fa-linkedin prefix"></i>
-                <span>Linked In</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="grey-text text-lighten-3">
-                <i class="fab fa-instagram prefix"></i>
-                <span>Instagram</span>
-              </a>
-            </li>
+          <!-- Desktop menu -->
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#search">Search</a></li>
+            <li><a href="#popular">Popular Places</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
+  </div>
 
-
-    <div class="footer-copyright grey darken-4">
-      <div class="container center-align">&copy; 2020 Victor Alvarez</div>
-    </div>
-  </footer>
-
+  <!-- Mobile menu -->
+  <ul id="mobile-nav" class="sidenav">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#search">Search</a></li>
+    <li><a href="#popular">Popular Places</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  
   <script src="/src.e31bb0bc.js">
 
   </script>
