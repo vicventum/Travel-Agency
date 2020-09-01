@@ -6353,12 +6353,12 @@ M.anime = function () {
 },{"@babel/runtime/helpers/typeof":"../node_modules/@babel/runtime/helpers/typeof.js"}],"app/js/materialize-config.js":[function(require,module,exports) {
 M.AutoInit(); // Datepicker
 
-document.addEventListener('DOMContentLoaded', function () {
-  var options = {
-    disableWeekends: true
-  };
-  var date_element = document.querySelectorAll('.datepicker');
-  var date_instance = M.Datepicker.init(date_element, options);
+var slider = document.querySelector('.slider');
+M.Slider.init(slider, {
+  indicators: false,
+  height: 500,
+  transition: 500,
+  interval: 6000
 });
 },{}],"app/js/app.js":[function(require,module,exports) {
 
