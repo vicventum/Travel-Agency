@@ -8,12 +8,12 @@
 
 // // helpers
 @import "helpers/utilities"; 
-// @import "helpers/mixins"; 
+@import "helpers/mixins"; 
 // @import "helpers/animations"; 
 
 // components
 // @import "components/buttons"; 
-// @import 'components/navbar';
+@import 'components/search';
 
 // layout
 // @import 'layout/header';

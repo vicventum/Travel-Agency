@@ -1,0 +1,19 @@
+// .search input {
+  
+//   padding: _(6px);
+//   font-size: _(18px);
+//   width: _(90%);
+//   border: _(3px solid #f3f3f3);
+//   border-radius: _(5px);
+// }
+.search  {
+
+  &__input.important {
+    padding: 6px;
+    font-size: 18px;
+    width: 90%;
+    border: 3px solid #f3f3f3;
+    border-radius: 5px;
+
+  }
+}

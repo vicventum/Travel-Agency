@@ -194,7 +194,46 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/@babel/runtime/helpers/typeof.js":[function(require,module,exports) {
+},{"_css_loader":"../../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"app/js/important.js":[function(require,module,exports) {
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+addEventListener('DOMContentLoaded', function () {
+  console.log(document.styleSheets);
+  var css = document.styleSheets[document.styleSheets.length - 1];
+  console.log(css); // css.forEach(el => {
+  //   if (el.selectorText ===  'search__input') console.log(el);
+  // });
+
+  var importants;
+
+  var _iterator = _createForOfIteratorHelper(css.cssRules),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var el = _step.value;
+
+      if (el.selectorText === '.search__input.important') {
+        console.log(el);
+        console.log(el.cssText);
+        importants = el.cssText.replace(/;/g, '!important;'); // console.log(el.cssText);
+        // console.log(el);
+      }
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+
+  console.log(importants);
+  css.insertRule(importants, 0);
+}); // css[890].cssText
+},{}],"../node_modules/@babel/runtime/helpers/typeof.js":[function(require,module,exports) {
 function _typeof(obj) {
   "@babel/helpers - typeof";
 
@@ -6351,7 +6390,7 @@ M.anime = function () {
   M.Range = t, M.jQueryLoaded && M.initializeJqueryWrapper(t, "range", "M_Range"), t.init(s("input[type=range]"));
 }(cash, M.anime);
 },{"@babel/runtime/helpers/typeof":"../node_modules/@babel/runtime/helpers/typeof.js"}],"app/js/materialize-config.js":[function(require,module,exports) {
-M.AutoInit(); // Datepicker
+M.AutoInit(); // Slider
 
 var slider = document.querySelector('.slider');
 M.Slider.init(slider, {
@@ -6359,6 +6398,19 @@ M.Slider.init(slider, {
   height: 500,
   transition: 500,
   interval: 6000
+}); // Autocomplete
+
+var ac = document.querySelector('.autocomplete');
+M.Autocomplete.init(ac, {
+  data: {
+    'Aruba': null,
+    'Cancun Mexico': null,
+    'Hawaii': null,
+    'Florida': null,
+    'California': null,
+    'Jamaica': null,
+    'Islas Las Palmas': null
+  }
 });
 },{}],"app/js/app.js":[function(require,module,exports) {
 
@@ -6369,12 +6421,14 @@ require("./app/vendor/materialize/materialize.min.css");
 
 require("./app/scss/main.scss");
 
+require("./app/js/important");
+
 require("./app/vendor/materialize/materialize.min.js");
 
 require("./app/js/materialize-config");
 
 require("./app/js/app");
-},{"./app/vendor/materialize/materialize.min.css":"app/vendor/materialize/materialize.min.css","./app/scss/main.scss":"app/scss/main.scss","./app/vendor/materialize/materialize.min.js":"app/vendor/materialize/materialize.min.js","./app/js/materialize-config":"app/js/materialize-config.js","./app/js/app":"app/js/app.js"}],"../../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./app/vendor/materialize/materialize.min.css":"app/vendor/materialize/materialize.min.css","./app/scss/main.scss":"app/scss/main.scss","./app/js/important":"app/js/important.js","./app/vendor/materialize/materialize.min.js":"app/vendor/materialize/materialize.min.js","./app/js/materialize-config":"app/js/materialize-config.js","./app/js/app":"app/js/app.js"}],"../../../../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -6402,7 +6456,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65359" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56836" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
