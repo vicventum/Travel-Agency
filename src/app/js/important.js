@@ -1,10 +1,14 @@
 
 addEventListener('DOMContentLoaded', () => {
-
   console.log(document.styleSheets);
-  const css = document.styleSheets[document.styleSheets.length - 1]
-  
-  
+  let css
+
+
+  // Comprueba cual es la hoja de estilo principal
+  for (const i of document.styleSheets) {
+    if (i.href.includes('localhost')) 
+      css = i
+  }
   console.log(css);
 
   // css.forEach(el => {
@@ -13,7 +17,7 @@ addEventListener('DOMContentLoaded', () => {
   let importants
 
   for (const el of css.cssRules) {
-    if (el.selectorText ===  '.search__input.important') {
+    if (el.selectorText === '.search__input.important') {
       console.log(el);
       console.log(el.cssText);
       importants = el.cssText.replace(/;/g, '!important;')
