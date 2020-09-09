@@ -1,34 +1,27 @@
-
 addEventListener('DOMContentLoaded', () => {
-  console.log(document.styleSheets);
+  // console.log(document.styleSheets);
   let css
-
 
   // Comprueba cual es la hoja de estilo principal
   for (const i of document.styleSheets) {
     if (i.href.includes('localhost')) 
       css = i
   }
-  console.log(css);
 
-  // css.forEach(el => {
-  //   if (el.selectorText ===  'search__input') console.log(el);
-  // });
-  let importants
+  let importants = []
 
-  for (const el of css.cssRules) {
-    if (el.selectorText === '.search__input.important') {
+  
+  // Encontrando todos los importants
+  for (const el of css.cssRules){
+    // console.log(el.selectorText);
+    if (el.selectorText !== undefined && el.selectorText.includes('important')) {
       console.log(el);
-      console.log(el.cssText);
-      importants = el.cssText.replace(/;/g, '!important;')
-      
-      // console.log(el.cssText);
-      // console.log(el);
+      // Asignando los !importants a los selectores indicados
+      importants.push(el.cssText.replace(/;/g, '!important;')) 
     }
   }
+
   console.log(importants);
-  css.insertRule(importants, 0); 
+  // Inserta todos los importants en el DOM
+  importants.forEach(el => css.insertRule(el, 0));
 })
-
-
-// css[890].cssText

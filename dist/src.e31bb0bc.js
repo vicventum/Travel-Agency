@@ -202,7 +202,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 addEventListener('DOMContentLoaded', function () {
-  console.log(document.styleSheets);
+  // console.log(document.styleSheets);
   var css; // Comprueba cual es la hoja de estilo principal
 
   var _iterator = _createForOfIteratorHelper(document.styleSheets),
@@ -219,11 +219,7 @@ addEventListener('DOMContentLoaded', function () {
     _iterator.f();
   }
 
-  console.log(css); // css.forEach(el => {
-  //   if (el.selectorText ===  'search__input') console.log(el);
-  // });
-
-  var importants;
+  var importants = []; // Encontrando todos los importants
 
   var _iterator2 = _createForOfIteratorHelper(css.cssRules),
       _step2;
@@ -232,11 +228,11 @@ addEventListener('DOMContentLoaded', function () {
     for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
       var el = _step2.value;
 
-      if (el.selectorText === '.search__input.important') {
-        console.log(el);
-        console.log(el.cssText);
-        importants = el.cssText.replace(/;/g, '!important;'); // console.log(el.cssText);
-        // console.log(el);
+      // console.log(el.selectorText);
+      if (el.selectorText !== undefined && el.selectorText.includes('important')) {
+        console.log(el); // Asignando los !importants a los selectores indicados
+
+        importants.push(el.cssText.replace(/;/g, '!important;'));
       }
     }
   } catch (err) {
@@ -245,9 +241,12 @@ addEventListener('DOMContentLoaded', function () {
     _iterator2.f();
   }
 
-  console.log(importants);
-  css.insertRule(importants, 0);
-}); // css[890].cssText
+  console.log(importants); // Inserta todos los importants en el DOM
+
+  importants.forEach(function (el) {
+    return css.insertRule(el, 0);
+  });
+});
 },{}],"../node_modules/@babel/runtime/helpers/typeof.js":[function(require,module,exports) {
 function _typeof(obj) {
   "@babel/helpers - typeof";
