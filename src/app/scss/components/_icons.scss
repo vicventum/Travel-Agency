@@ -4,4 +4,8 @@
   &:hover {
     color: aqua;
   }
+
+  @include media('<=tablet') {
+    font-size: 2.6em;
+  }
 }

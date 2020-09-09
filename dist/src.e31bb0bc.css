@@ -369,6 +369,11 @@
 .section-follow i:hover {
   color: aqua;
 }
+@media (max-width: 768px) {
+  .section-follow i {
+    font-size: 2.6em;
+  }
+}
 
 .search__input.important {
   padding: 6px;

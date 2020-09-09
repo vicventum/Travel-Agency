@@ -211,7 +211,8 @@ addEventListener('DOMContentLoaded', function () {
   try {
     for (_iterator.s(); !(_step = _iterator.n()).done;) {
       var i = _step.value;
-      if (i.href.includes('localhost')) css = i;
+      console.log(i);
+      if (i.href.includes('localhost') || i.href.includes('github')) css = i;
     }
   } catch (err) {
     _iterator.e(err);
@@ -6470,7 +6471,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63111" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49825" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
