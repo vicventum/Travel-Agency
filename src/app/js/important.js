@@ -4,8 +4,8 @@ addEventListener('DOMContentLoaded', () => {
 
   // Comprueba cual es la hoja de estilo principal
   for (const i of document.styleSheets) {
-    console.log(i);
-    if (i.href.includes('localhost') || i.href.includes('github')) 
+    console.log(i.href);
+    if (i.href !== null &&(i.href.includes('http://localhost:' || i.href.includes('github')))) 
       css = i
   }
 

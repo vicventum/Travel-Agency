@@ -369,7 +369,7 @@
 .section-follow i:hover {
   color: aqua;
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .section-follow i {
     font-size: 2.6em;
   }
@@ -381,6 +381,41 @@
   width: 90%;
   border: 3px solid #f3f3f3;
   border-radius: 5px;
+}
+
+.sidenav {
+  background-color: #0277bd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.sidenav li {
+  border-bottom: 1px solid white;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.sidenav a.important {
+  color: white;
+  font-size: 1.5rem;
+  height: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 /*# sourceMappingURL=/src.e31bb0bc.css.map */

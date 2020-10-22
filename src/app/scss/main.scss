@@ -1,5 +1,5 @@
 // vendor
-@import '../../../node_modules/include-media/dist/include-media';
+// @import '../../../node_modules/include-media/dist/include-media';
 
 // // config
 // @import "config/variables";
@@ -15,6 +15,7 @@
 // @import "components/buttons"; 
 @import "components/icons"; 
 @import 'components/search';
+@import 'components/_sidenav.sass';
 
 // layout
 // @import 'layout/header';
