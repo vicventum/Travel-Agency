@@ -26,6 +26,29 @@ body {
     // line-height: $line-height;
     // color: $light;
     // background-color: $dark;
+
+    scrollbar-width: thin;
+    scrollbar-color: #0288d1 transparent;
+
+    &::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: #0288d1;
+        border-radius: 20px;
+
+        transition: background-color .2s ease-in-out;
+
+        &:hover {
+            background-color: darken($color: #0288d1, $amount: 2%);
+        }
+    }
 }
 
 h1, h2, h3 {
@@ -42,6 +65,11 @@ h3 {
 ul {
     // list-style: none;
     // padding-left: 0;
+    // margin-top: 0;
+    // margin-bottom: 0;
+}
+
+p {
     // margin-top: 0;
     // margin-bottom: 0;
 }

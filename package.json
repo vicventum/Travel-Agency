@@ -7,7 +7,7 @@
     "init": "parcel src/index.html",
     "save-dev": "npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/plugin-transform-runtime sass postcss-modules autoprefixer cssnano",
     "save": "npm install --save @babel/runtime core-js include-media rfs",
-    "build": "parcel build ./src/index.html --out-dir public",
+    "build": "parcel build ./src/index.html --out-dir docs",
     "deploy": "firebase deploy"
   },
   "keywords": [

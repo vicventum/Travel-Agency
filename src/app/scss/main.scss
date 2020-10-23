@@ -5,6 +5,8 @@
 // @import "config/variables";
 // @import "config/reset"; 
 
+// fontello
+@import "../vendor/fontello/css/facebook.css";
 
 // // helpers
 @import "helpers/utilities"; 
@@ -15,6 +17,7 @@
 // @import "components/buttons"; 
 @import "components/icons"; 
 @import 'components/search';
+@import 'components/_navbar.sass';
 @import 'components/_sidenav.sass';
 
 // layout

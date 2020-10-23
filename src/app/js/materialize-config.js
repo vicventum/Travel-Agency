@@ -1,4 +1,9 @@
-M.AutoInit()
+
+// ScrollSpy
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollspy = document.querySelectorAll('.scrollspy')
+  M.ScrollSpy.init(scrollspy)
+})
 
 // Slider
 const slider = document.querySelector('.slider')
@@ -9,8 +14,12 @@ M.Slider.init(slider, {
   interval: 6000
 })
 
+// Slider
+const sidenav = document.querySelector('.sidenav')
+M.Sidenav.init(sidenav)
+
 // Autocomplete
-const ac = document.querySelector('.autocomplete')
+const ac = document.querySelectorAll('.autocomplete')
 M.Autocomplete.init(ac, {
   data: {
     'Aruba': null,
@@ -22,3 +31,7 @@ M.Autocomplete.init(ac, {
     'Islas Las Palmas': null
   }
 })
+
+// Lightbox
+const materialbox = document.querySelectorAll('.materialboxed')
+M.Materialbox.init(materialbox)

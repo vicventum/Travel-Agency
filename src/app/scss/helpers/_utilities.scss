@@ -1,281 +1,232 @@
-// .u {
+$m-breakpoints: ('': 0, // Mantener en 0
+    s: 320px,
+    m: 600px,
+    l: 993px,
+    xl: 1200px);
+$responsiveSign: ''!default;
+$limit: 40;
 
-//     // Container
-//     &-box {
-//         --width: 50rem;
-//         --p-y: 2.2rem;
-//         --p-x: 1.4rem;
-
-//         max-width: var(--width);
-//         margin: 0 auto;
-
-//         @include media('>=tablet') {
-//             --width: 70rem;
-
-//             --p-y: 2.4rem;
-//             --p-x: 2.2rem;
-//         }
-
-//         @include media('>=laptop') {
-//             --width: 90rem;
-//         }
-
-//         @include media('>=desktop') {
-//             max-width: $max-width;
-//         }
-
-
-//         &--pall {
-//             padding-top: var(--p-y);
-//             padding-bottom: var(--p-y);
-//             padding-left: var(--p-x);
-//             padding-right: var(--p-x);
-
-//         }
-
-//         &--py {
-//             padding-top: var(--p-y);
-//             padding-bottom: var(--p-y);
-
-//         }
-
-//         &--px {
-//             padding-left: var(--p-x);
-//             padding-right: var(--p-x);
-//         }
-
-//         &--pt {
-//             padding-top: var(--p-y);
-//         }
-
-//         &--pb {
-//             padding-bottom: var(--p-y);
-
-//         }
-
-//         &--pl {
-//             padding-left: var(--p-x);
-//         }
-
-//         &--pr {
-//             padding-right: var(--p-x);
-//         }
-
-//     }
-
-//     // Responsive Grid 
-//     &-responsiveGrid {
-//         display: grid;
-//         // gap: 1em;
-//         grid-template-columns: repeat(auto-fit, minmax($show-size, 1fr));
-//     }
-
-//     // Resposive Flexbox
-//     &-responsiveFlex {
-//         display: flex;
-//         flex-wrap: wrap;
-
-//         &>* {
-//             flex: 1 1 $show-size;
-//         }
-//     }
-
-
-//     &-text-center {
-//         text-align: center;
-//     }
-
-//     &-round-img {
-//         border-radius: 50%;
-//     }
-
-//     &-line {
-//         height: 3px;
-//         width: 80%;
-//         background-color: #ccc;
-//         margin: 4rem auto;
-
-//         @include media('>=laptop') {
-//             width: 40%;
-//         }
-//     }
-
-
-//     // Backgrounds  
-//     &-bg {
-//         &--yellow {
-//             background-color: $yellow-base;
-//         }
-
-//         &--dark {
-//             background-color: $dark;
-//         }
-
-//         &--light {
-//             background-color: $light;
-//         }
-
-//         &--red {
-//             background-color: $red-base;
-//         }
-
-//         &--purple {
-//             background-color: $purple-base;
-//         }
-//     }
-
-//     // Visibility
-//     &-none {
-//         display: none;
-//     }
-
-//     &-invisible {
-//         overflow: hidden;
-//     }
-
-//     &-hide-for-mobile {
-
-//         // Hide for tablet and mobile
-//         @include media('<tablet') {
-//             display: none !important;
-//         }
-//     }
-
-//     &-hide-for-desktop {
-
-//         // Hide for desktop viewport widths
-//         @include media('>=tablet') {
-//             display: none !important;
-//         }
-//     }
-
-// }
-
-
-.m {
-    // Clases de paddings y margins ================================================
-    @for $i from 0 through 10 {
-
-        @if round($i / 2)==$i / 2 {
-            // Entero
-
-            $var: ($i / 2) * 10;
-
-            // Margin
-            &-mall-#{$var} {
-                margin: ($i / 2) * 10px;
+// Responsive -----------------------------------
+@each $sizeName, $size in $m-breakpoints {
+    @media screen and (min-width: $size) {
+        .#{$sizeName}m {
+        
+            // Clases de paddings y margins ================================================
+            @for $i from 0 through $limit {
+        
+                @if round($i / 2)==$i / 2 {
+                    // Entero
+        
+                    $var: ($i / 2) * 10;
+        
+                    // Margin
+                    &-mx-#{$var} {
+                        margin-left: ($i / 2) * 10px;
+                        margin-right: ($i / 2) * 10px;
+                    }
+        
+                    &-my-#{$var} {
+                        margin-top: ($i / 2) * 10px;
+                        margin-bottom: ($i / 2) * 10px;
+                    }
+                    &-my--#{$var} {
+                        margin-top: ($i / 2) * -10px;
+                        margin-bottom: ($i / 2) * -10px;
+                    }
+        
+                    &-mall-#{$var} {
+                        margin: ($i / 2) * 10px;
+                    }
+        
+                    &-mall--#{$var} {
+                        margin: ($i / 2) * -10px;
+                    }
+        
+                    &-ml-#{$var} {
+                        margin-left: ($i / 2) * 10px;
+                    }
+        
+                    &-ml--#{$var} {
+                        margin-left: ($i / 2) * -10px;
+                    }
+        
+                    &-mr-#{$var} {
+                        margin-right: ($i / 2) * 10px;
+                    }
+        
+                    &-mr--#{$var} {
+                        margin-right: ($i / 2) * -10px;
+                    }
+        
+                    &-mt-#{$var} {
+                        margin-top: ($i / 2) * 10px;
+                    }
+        
+                    &-mt--#{$var} {
+                        margin-top: ($i / 2) * -10px;
+                    }
+        
+                    &-mb-#{$var} {
+                        margin-bottom: ($i / 2) * 10px;
+                    }
+        
+                    &-mb--#{$var} {
+                        margin-bottom: ($i / 2) * -10px;
+                    }
+        
+        
+        
+                    // Paddins
+                    &-px-#{$var} {
+                        padding-left: ($i / 2) * 10px;
+                        padding-right: ($i / 2) * 10px;
+                    }
+        
+                    &-py-#{$var} {
+                        padding-top: ($i / 2) * 10px;
+                        padding-bottom: ($i / 2) * 10px;
+                    }
+        
+                    &-pall-#{$var} {
+                        padding: ($i / 2) * 10px;
+                    }
+        
+                    &-pl-#{$var} {
+                        padding-left: ($i / 2) * 10px;
+                    }
+        
+                    &-pr-#{$var} {
+                        padding-right: ($i / 2) * 10px;
+                    }
+        
+                    &-pt-#{$var} {
+                        padding-top: ($i / 2) * 10px;
+                    }
+        
+                    &-pb-#{$var} {
+                        padding-bottom: ($i / 2) * 10px;
+                    }
+        
+                }
+        
+                @else {
+                    // Decimal
+        
+                    $var: ($i / 2) * 10;
+        
+        
+        
+                    // Margin
+                    &-mx-#{$var} {
+                        margin-left: ($i / 2) * 10px;
+                        margin-right: ($i / 2) * 10px;
+                    }
+        
+                    &-my-#{$var} {
+                        margin-top: ($i / 2) * 10px;
+                        margin-bottom: ($i / 2) * 10px;
+                    }
+        
+                    &-mall-#{$var} {
+                        margin: ($i / 2) * 10px;
+                    }
+        
+                    &-ma-ll-#{$var} {
+                        margin: ($i / 2) * -10px;
+                    }
+        
+        
+                    &-ml-#{$var} {
+                        margin-left: ($i / 2) * 10px;
+                    }
+        
+                    &-ml--#{$var} {
+                        margin-left: ($i / 2) * -10px;
+                    }
+        
+                    &-mr-#{$var} {
+                        margin-right: ($i / 2) * 10px;
+                    }
+        
+                    &-mr--#{$var} {
+                        margin-right: ($i / 2) * -10px;
+                    }
+        
+                    &-mt-#{$var} {
+                        margin-top: ($i / 2) * 10px;
+                    }
+        
+                    &-mt--#{$var} {
+                        margin-top: ($i / 2) * -10px;
+                    }
+        
+                    &-mb-#{$var} {
+                        margin-bottom: ($i / 2) * 10px;
+                    }
+        
+                    &-mb--#{$var} {
+                        margin-bottom: ($i / 2) * -10px;
+                    }
+        
+        
+                    // Paddins
+                    &-px-#{$var} {
+                        margin-left: ($i / 2) * 10px;
+                        margin-right: ($i / 2) * 10px;
+                    }
+        
+                    &-py-#{$var} {
+                        margin-top: ($i / 2) * 10px;
+                        margin-bottom: ($i / 2) * 10px;
+                    }
+        
+                    &-pall-#{$var} {
+                        padding: ($i / 2) * 10px;
+                    }
+        
+                    &-pl-#{$var} {
+                        padding-left: ($i / 2) * 10px;
+                    }
+        
+                    &-pr-#{$var} {
+                        padding-right: ($i / 2) * 10px;
+                    }
+        
+                    &-pt-#{$var} {
+                        padding-top: ($i / 2) * 10px;
+                    }
+        
+                    &-pb-#{$var} {
+                        padding-bottom: ($i / 2) * 10px;
+                    }
+        
+                }
             }
-
-            &-ml-#{$var} {
-                margin-left: ($i / 2) * 10px;
+        
+            // Reset h1...h6
+            &-h1 {
+                font-size: 4.2rem;
             }
-
-            &-mr-#{$var} {
-                margin-right: ($i / 2) * 10px;
+        
+            &-h2 {
+                font-size: 3.6rem;
             }
-
-            &-mt-#{$var} {
-                margin-top: ($i / 2) * 10px;
+        
+            &-h3 {
+                font-size: 2.92rem;
             }
-
-            &-mb-#{$var} {
-                margin-bottom: ($i / 2) * 10px;
+        
+            &-h4 {
+                font-size: 2.28rem;
             }
-
-
-            // Paddins
-            &-pall-#{$var} {
-                padding: ($i / 2) * 10px;
+        
+            &-h5 {
+                font-size: 1.64rem;
             }
-
-            &-pl-#{$var} {
-                padding-left: ($i / 2) * 10px;
+        
+            &-h6 {
+                font-size: 1.15rem;
             }
-
-            &-pr-#{$var} {
-                padding-right: ($i / 2) * 10px;
-            }
-
-            &-pt-#{$var} {
-                padding-top: ($i / 2) * 10px;
-            }
-
-            &-pb-#{$var} {
-                padding-bottom: ($i / 2) * 10px;
-            }
-
         }
-
-        @else {
-            // Decimal
-
-            $var: ($i / 2) * 10;
-
-
-
-            // Margin
-            &-mall-#{$var} {
-                margin: ($i / 2) * 10px;
-            }
-
-            &-ml-#{$var} {
-                margin-left: ($i / 2) * 10px;
-            }
-
-            &-mr-#{$var} {
-                margin-right: ($i / 2) * 10px;
-            }
-
-            &-mt-#{$var} {
-                margin-top: ($i / 2) * 10px;
-            }
-
-            &-mb-#{$var} {
-                margin-bottom: ($i / 2) * 10px;
-            }
-
-
-            // Paddins
-            &-pall-#{$var} {
-                padding: ($i / 2) * 10px;
-            }
-
-            &-pl-#{$var} {
-                padding-left: ($i / 2) * 10px;
-            }
-
-            &-pr-#{$var} {
-                padding-right: ($i / 2) * 10px;
-            }
-
-            &-pt-#{$var} {
-                padding-top: ($i / 2) * 10px;
-            }
-
-            &-pb-#{$var} {
-                padding-bottom: ($i / 2) * 10px;
-            }
-
-        }
-    }
-
-    // Reset h1...h6
-    &-h1 {
-        font-size: 4.2rem;
-    }
-    &-h2 {
-        font-size: 3.6rem;
-    }
-    &-h3 {
-        font-size: 2.92rem;
-    }
-    &-h4 {
-        font-size: 2.28rem;
-    }
-    &-h5 {
-        font-size: 1.64rem;
-    }
-    &-h6 {
-        font-size: 1.15rem;
     }
 }
