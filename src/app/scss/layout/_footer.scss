@@ -1,10 +1,9 @@
 footer {
-  @media (min-width: 992px) {
+  a {
+    color: white;
+    transition: color 0.3s ease-in-out;
     
-    a {
-      color: white;
-      transition: color .3s ease-in-out;
-  
+    @media (min-width: 992px) {
       &:hover {
         color: aqua;
       }
