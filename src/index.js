@@ -8,6 +8,8 @@ import "../node_modules/materialize-css/js/cash"
 import "../node_modules/materialize-css/js/global"
 import "../node_modules/materialize-css/js/anime.min"
 
+import "./app/js/vendor/scrollreveal-config"
+
 import "../node_modules/materialize-css/js/sidenav"
 import "../node_modules/materialize-css/js/scrollspy"
 import "../node_modules/materialize-css/js/waves"

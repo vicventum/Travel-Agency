@@ -1,16 +1,13 @@
-.footer {
-
-  .connect i {
-    margin-right: 10px;
-
+footer {
+  @media (min-width: 992px) {
     
-  }
-  .connect i,
-  .connect a {
-    transition: color .1s ease-in-out;
-
-    &:hover {
-      color: rgb(197, 196, 255)!important;
+    a {
+      color: white;
+      transition: color .3s ease-in-out;
+  
+      &:hover {
+        color: aqua;
+      }
     }
   }
 }
